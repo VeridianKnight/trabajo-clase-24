@@ -1,0 +1,246 @@
+:root{
+    --clr-gris-obs: #343541;
+    --clr-girs-mid: #444654;
+    --clr-gris-claro: #667788;
+    --clr-violeta:#DC1FFF;
+    --clr-rojo:#fd5d85;
+    --clr-verde:#00FFA3;
+    --fuente-primaria: 'Nova Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    background-color: var(--clr-girs-mid);
+}
+/**************/
+/* ENCABEZADO */
+/**************/
+#encabezado-div {
+    text-align: center; 
+    position: fixed;
+    width: 100%;
+    min-height:fit-content;
+    height: 8vh;
+    background-color: var(--clr-gris-obs);
+    z-index: 99;
+}
+
+#encabezado-div button{
+    cursor: pointer;
+    display: inline-block;
+    margin: 1vh 1vw 0 1vw;
+    padding: 1vh 2vw;
+    background: linear-gradient(90deg, var(--clr-violeta), var(--clr-verde));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 1.5rem;
+    border-image: linear-gradient(90deg, var(--clr-verde), var(--clr-violeta)) 1;
+    border-image-slice: 1;
+    transition: all 450ms ease-in-out;
+}
+
+
+/*************************/
+/* ESTILOS DE LAS FORMS */
+/************************/
+
+#forms{/* ESTILOS GENERALES QUE APLICAN A TODAS LAS FORMS*/
+    display: flex;
+    position: fixed;
+    width: 100%;
+    min-height: fit-content;
+    height: 2.5vh;
+    bottom: 0;
+    background-color: var(--clr-gris-obs);
+    font-size: 1.1rem;
+}
+
+/* ESTILOS ESPESIFICOS DE LAS FORM PARA AGREEGAR PRODUCTOS :*/
+#add-producto-form{
+    padding-top: 1.5vh;
+    padding-left: 1vw;
+    color: var(--clr-verde);
+    display: none;
+}
+#add-producto-form label{
+    font-weight: bold;
+    transform: translateY(-0.7vh);
+    display: inline-block;
+
+}
+#add-producto-form input[type="text"]{
+    border: none;
+    border-radius: 3px;
+    background-color: var(--clr-gris-claro);
+    width: 15vw;
+    margin-right: 1vw;
+    color: whitesmoke;
+    font-weight: bold;
+    transform: translateY(-0.7vh); 
+}
+#add-producto-form input[type="submit"]{
+    cursor: pointer;
+    display: inline-block;
+    background: linear-gradient(90deg, var(--clr-violeta),var(--clr-verde));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 1.2rem;
+    border-image: linear-gradient(90deg, var(--clr-verde), var(--clr-violeta)) 1;
+    border-image-slice: 1;
+    transform: translateY(-0.5vh);
+    transition: all 450ms ease-in-out;
+    padding: 0 0.3vw 0 0.3vw;
+}
+#add-producto-form input[type="button"]{
+    cursor: pointer;
+    display: inline-block;
+    background: linear-gradient(90deg, var(--clr-violeta),var(--clr-rojo));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 1.2rem;
+    border-image: linear-gradient(90deg, var(--clr-violeta),var(--clr-rojo)) 1;
+    border-image-slice: 1;
+    transform: translateY(-0.5vh);
+    transition: all 450ms ease-in-out;
+    padding: 0 0.3vw 0 0.3vw;
+    margin-left: .5vw;
+}
+
+/* ESTILOS ESPESIFICOS DE LAS FORM PARA EDITAR PRODUCTOS :*/
+#edt-producto-form{
+    padding-top: 1.5vh;
+    padding-left: 1vw;
+    color: var(--clr-verde);
+    display: none;
+}
+#edt-producto-form label{
+    font-weight: bold;
+    transform: translateY(-0.7vh);
+    display: inline-block;
+
+}
+#edt-producto-form input[type="text"]{
+    border: none;
+    border-radius: 3px;
+    background-color: var(--clr-gris-claro);
+    width: 15vw;
+    margin-right: 1vw;
+    color: whitesmoke;
+    font-weight: bold;
+    transform: translateY(-0.7vh); 
+}
+#edt-producto-form input[type="submit"]{
+    cursor: pointer;
+    display: inline-block;
+    background: linear-gradient(90deg, var(--clr-violeta),var(--clr-verde));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 1.2rem;
+    border-image: linear-gradient(90deg, var(--clr-verde), var(--clr-violeta)) 1;
+    border-image-slice: 1;
+    transform: translateY(-0.5vh);
+    transition: all 450ms ease-in-out;
+    padding: 0 0.3vw 0 0.3vw;
+}
+#edt-producto-form input[type="button"]{
+    cursor: pointer;
+    display: inline-block;
+    background: linear-gradient(90deg, var(--clr-violeta),var(--clr-rojo));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 1.2rem;
+    border-image: linear-gradient(90deg, var(--clr-violeta),var(--clr-rojo)) 1;
+    border-image-slice: 1;
+    transform: translateY(-0.5vh);
+    transition: all 450ms ease-in-out;
+    padding: 0 0.3vw 0 0.3vw;
+    margin-left: .5vw;
+}
+
+/* ESTILOS ESPESIFICOS DE LAS FORM PARA ELIMINAR PRODUCTOS :*/
+#dlt-producto-form{
+    padding-top: 1.5vh;
+    padding-left: 1vw;
+    color: var(--clr-verde);
+    display: none;
+}
+#dlt-producto-form label{
+    font-weight: bold;
+    transform: translateY(-0.7vh);
+    display: inline-block;
+
+}
+#dlt-producto-form input[type="text"]{
+    border: none;
+    border-radius: 3px;
+    background-color: var(--clr-gris-claro);
+    width: 15vw;
+    margin-right: 1vw;
+    color: whitesmoke;
+    font-weight: bold;
+    transform: translateY(-0.7vh); 
+}
+#dlt-producto-form input[type="submit"]{
+    cursor: pointer;
+    display: inline-block;
+    background: linear-gradient(90deg, var(--clr-violeta),var(--clr-verde));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 1.2rem;
+    border-image: linear-gradient(90deg, var(--clr-verde), var(--clr-violeta)) 1;
+    border-image-slice: 1;
+    transform: translateY(-0.5vh);
+    transition: all 450ms ease-in-out;
+    padding: 0 0.3vw 0 0.3vw;
+}
+#dlt-producto-form input[type="button"]{
+    cursor: pointer;
+    display: inline-block;
+    background: linear-gradient(90deg, var(--clr-violeta),var(--clr-rojo));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 1.2rem;
+    border-image: linear-gradient(90deg, var(--clr-violeta),var(--clr-rojo)) 1;
+    border-image-slice: 1;
+    transform: translateY(-0.5vh);
+    transition: all 450ms ease-in-out;
+    padding: 0 0.3vw 0 0.3vw;
+    margin-left: .5vw;
+}
+
+/*******************************************/
+/* ESTILOS DE LA TABLA DE LA BASE DE DATOS*/
+/*******************************************/
+
+#tabla-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tabla-db{
+    margin-top: 9vh;
+    margin-bottom: 15vh;
+    border-collapse: collapse;
+    width: 80%; 
+}
+
+
+#tabla-db th, #tabla-db td {
+    border: 5px solid var(--clr-verde); /* Borde sólido para todas las celdas */
+    padding: 8px; /* Añade espacio entre el contenido y los bordes */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: beige;
+}
